@@ -14,6 +14,8 @@ const Counter = props => {
 	const incrementAsync = () => {
 		// Stretch Problem: Implement an increment function that
 		// increments after waiting for one second
+		//*`I read up on asynchronous behaviour in redux i came across react thunk`*
+		window.setTimeout(props.increment, 1000);
 	};
 	// Fill in the two button onClick methods
 	// Upon clicking these buttons, the count
