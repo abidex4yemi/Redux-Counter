@@ -6,6 +6,9 @@ const Counter = props => {
 	const incrementIfOdd = () => {
 		// Stretch Problem: Implement an increment function that
 		// only increments if the counter value is odd
+		if (props.count % 2 === 1) {
+			props.increment();
+		}
 	};
 
 	const incrementAsync = () => {
@@ -34,12 +37,8 @@ const Counter = props => {
 			</button>
 			{/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-			{/* <button onClick={this.incrementIfOdd}>
-                    Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Increment async
-                </button>  */}
+			<button onClick={incrementIfOdd}>Increment if odd</button>
+			<button onClick={incrementAsync}>Increment async</button>
 		</p>
 	);
 };
